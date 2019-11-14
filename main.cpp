@@ -374,15 +374,7 @@ int read_tracks(string filename, vector<Track>& tracks)
     else
     {
         Track currentTrack;
-        TrackDisplay options;
-        options.showArtist  = true;
-        options.showAlbum   = true;
-        options.showYear    = true;
-        options.showTrack   = true;
-        options.showTitle   = true;
-        options.showLength  = true;
-        options.showTags    = true;
-        options.showCountry = true;
+        TrackDisplay options = {true, true, true, true, true, true, true, true};
 
         while(read_track(file, currentTrack))
         {
